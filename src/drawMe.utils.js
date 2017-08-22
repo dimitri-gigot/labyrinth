@@ -1,6 +1,8 @@
 function drawMe(me){
-  var y = me.y*100
-  var x = me.x*100+100
+  var y = me.y * SIZE
+  var x = me.x * SIZE
+
+  console.log('me xy', x,y, SIZE)
   var $me = $G.querySelector('#me')
   if(!$me){
     $G.appendChild(createMe(me))
@@ -20,8 +22,8 @@ function drawMe(me){
 
 
 function drawBlock(block){
-  var y = block.y * 100
-  var x = block.x * 100 + 100
+  var y = block.y * SIZE
+  var x = block.x * SIZE
   //var transform = 'translate('+x+'px,'+y+'px)'
   var $block = $G.querySelector('#b'+block.$.id)
   if(!$block){

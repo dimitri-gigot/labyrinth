@@ -17,8 +17,8 @@ function createBlock(x, y, t, r) {
     $: elem('div', 'b'+uid(), t+' r'+r)
   }
 
-  var y = block.y * 100
-  var x = block.x * 100 + 100
+  var y = block.y * SIZE
+  var x = block.x * SIZE
 
   block.$.style.top = y+'px'
   block.$.style.left = x+'px'

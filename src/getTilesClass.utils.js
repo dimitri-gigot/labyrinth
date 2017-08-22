@@ -24,11 +24,11 @@ function getTilesClass(file, callback){
     function extractTile($img, type){
 
       var c = document.createElement('canvas')
-      c.height = 100
-      c.width = 100
+      c.height = SIZE
+      c.width = SIZE
       var cc = setpixelated(c.getContext('2d'))
 
-      cc.drawImage($img, type*h, 0, h, h, 0, 0, 100, 100)
+      cc.drawImage($img, type*h, 0, h, h, 0, 0, SIZE, SIZE)
 
       return c.toDataURL()
     }

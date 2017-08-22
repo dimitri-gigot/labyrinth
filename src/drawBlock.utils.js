@@ -1,6 +1,6 @@
 function drawBlock(block){
-  var y = block.y * 100
-  var x = block.x * 100 + 100
+  var y = block.y * SIZE
+  var x = block.x * SIZE
   //var transform = 'translate('+x+'px,'+y+'px)'
   var $block = $G.querySelector('#b'+block.$.id)
   if(!$block){

@@ -4,8 +4,10 @@ function moveBlocks(line, axis, dir){
   return function(block){
     if(block[a] === line){
         block[b]+= dir
-
-        var newPos = block[b] >= SIZE ? 0 : block[b] < 0 ? SIZE-1 : null
+        console.clear()
+        console.log(b, block[b])
+        var s = b==='x'?WNB:HNB
+        var newPos = block[b] >= s ? 0 : block[b] < 0 ? s-1 : null
 
         if(newPos !== null){
 
