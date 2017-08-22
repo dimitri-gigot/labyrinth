@@ -1,10 +1,12 @@
-function createBlock(x, y, t) {
-  t = t || rand(0, 10)
+function createBlock(x, y, t, r) {
+  t = t || String.fromCharCode(rand(0, 5)+65)
+  r = r || rand(1,4)
   var block = {
     x: x,
     y: y,
     t: t,
-    $: elem('div', 'b'+uid(), t)
+    r: r,
+    $: elem('div', 'b'+uid(), t+' r'+r)
   }
 
   var y = block.y * 100
@@ -19,7 +21,7 @@ function createBlock(x, y, t) {
     var $el = document.createElement(a)
     $el.id = b
     $el.className = 'block '+c
-    $el.style.background = 'rgb('+[rand(0,255),rand(0,255),rand(0,255)].join(',')+')'
+    //$el.style.background = 'rgb('+[rand(0,255),rand(0,255),rand(0,255)].join(',')+')'
     return $el
   }
 }

@@ -20,7 +20,7 @@ function moveBlocks(line, axis, dir){
           }
           setTimeout(function(){
             document.querySelector('#'+block.$.id).remove()
-          },1000)
+          },1)
           return createBlock(nx, ny)
 
         }
