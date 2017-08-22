@@ -1,6 +1,14 @@
 function createBlock(x, y, t, r) {
-  t = t || String.fromCharCode(rand(0, 5)+65)
-  r = r || rand(1,4)
+  var tt = rand(0, 50)
+
+  // try to distribute
+  t = t || tt < 10 ? 'A' : tt < 15 ? 'B' : tt < 25 ? 'C' : tt < 35 ? 'D' : 'E'
+  //totaly random
+  //t = t || String.fromCharCode(rand(0, 4)+65)
+
+
+  r = r || rand(0,3)
+
   var block = {
     x: x,
     y: y,

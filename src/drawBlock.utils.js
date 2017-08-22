@@ -11,8 +11,6 @@ function drawBlock(block){
   setTimeout(function(){
     $block.style.top = y+'px'
     $block.style.left = x+'px'
+    // $block.innerHTML = block.x+'/'+block.y+ ' - ' + block.t + ' - ' + block.r
   },0)
-
-  //$block.style.transform = transform
-
 }

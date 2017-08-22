@@ -21,6 +21,7 @@ function moveBlocks(line, axis, dir){
           setTimeout(function(){
             document.querySelector('#'+block.$.id).remove()
           },1)
+          if(nx === -1 || ny === -1) debugger;
           return createBlock(nx, ny)
 
         }
